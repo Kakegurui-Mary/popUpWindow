@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My Website</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="popUpWindow.js" defer></script>
+</head>
+  <body>
+    <header>
+      <h1>My Website</h1>
+      <nav>
+        <ul>
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <article class="tab" id="home">
+        <h2>Welcome to my website!</h2>
+        <p>Here you will find all sorts of interesting things.</p>
+      </article>
+      <article class="tab" id="blog">
+        <h2>Blog</h2>
+        <button id="create-post-btn">Create Post</button>
+      </article>
+      <article class="tab" id="about">
+        <h2>About</h2>
+        <p>Learn about the creator of this website.</p>
+      </article>
+      <article class="tab" id="contact">
+        <h2>Contact</h2>
+        <p>Get in touch with us.</p>
+      </article>
+    </main>
+    <div id="create-post-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Create a new post</h3>
+        <form id="create-post-form">
+          <label for="title">Title:</label>
+          <input type="text" id="title" name="title" required>
+          <label for="image">Image:</label>
+          <input type="file" id="image" name="image" multiple>
+          <label for="content">Content:</label>
+          <textarea id="content" name="content" required></textarea>
+          <button type="submit" id="upload-post-btn">Upload</button>
+          <button type="button" id="cancel-post-btn">Cancel</button>
+        </form>
+      </div>
+    </div>
+    <!-- Add a button to open the form -->
+<button onclick="openForm()">Create Post</button>
+
+<!-- The form popup -->
+<div id="create-post-popup" class="form-popup">
+  <form class="form-container">
+    <h1>Create Post</h1>
+
+    <label for="post-title"><b>Title</b></label>
+    <input type="text" placeholder="Enter title" name="post-title" required>
+
+    <label for="post-image"><b>Image</b></label>
+    <input type="file" name="post-image" multiple>
+
+    <label for="post-content"><b>Content</b></label>
+    <textarea placeholder="Enter post content" name="post-content" required></textarea>
+
+    <div class="button-container">
+      <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+      <button type="submit" class="btn upload">Upload</button>
+    </div>
+  </form>
+</div>
+
+  </body>
+</html>
