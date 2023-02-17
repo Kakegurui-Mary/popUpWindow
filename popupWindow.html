@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My Website</title>
+    <link rel="stylesheet" type="text/css" href="popUpWindow.css">
+    <script src="popUpWindow.js" defer></script>
+
+    </head>
+    
+      <body>
+        <button id="create-post-btn" onclick="openForm()">Create Post</button>
+    
+        <div class="form-popup" id="myForm">
+          <form class="form-container">
+            <h1>Create Post</h1>
+    
+            <label for="title"><b>Title</b></label>
+            <input type="text" placeholder="Enter Title" name="title" required />
+    
+            <label for="image"><b>Image</b></label>
+            <input type="file" name="image" />
+    
+            <label for="text"><b>Text</b></label>
+            <textarea
+              placeholder="Enter Text"
+              name="text"
+              required
+            ></textarea>
+    
+            <button type="submit" class="btn">Upload</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+          </form>
+        </div>
+      </body>
+    </html>
+    
+    
